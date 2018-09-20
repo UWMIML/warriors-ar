@@ -40,7 +40,8 @@ ready(function() {
   // Add camera
   // const camera = new THREE.Camera();
   const camera = new THREE.PerspectiveCamera(45, windowWidth/ windowHeight, 1, 1000);
-  camera.position.z = 600;
+  camera.position.z = 10;
+  console.log(camera.position.z);
 
   // Controls
   const _orbitControls = OrbitControls(THREE);
@@ -87,7 +88,9 @@ ready(function() {
   const loader = new GLTFLoader();
   loader.load(sceneGLTF, gltf => {
     const object = gltf.scene;
-    object.rotateX(-180);
+    object.rotateX(21);
+    object.rotateY(42);
+    object.translateY(-10);
     const gltfAnimation = gltf.animations;
     markerRoot.add(object);
     object.traverse(node => {
