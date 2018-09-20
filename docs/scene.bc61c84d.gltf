@@ -581,25 +581,25 @@
   ],
   "images": [
     {
-      "uri": "textures/Material.006_baseColor.png"
+      "uri": "textures/006_baseColor.png"
     },
     {
-      "uri": "textures/Material.005_baseColor.png"
+      "uri": "textures/005_baseColor.png"
     },
     {
-      "uri": "textures/Material.004_baseColor.png"
+      "uri": "textures/004_baseColor.png"
     },
     {
-      "uri": "textures/Material.007_baseColor.png"
+      "uri": "textures/007_baseColor.png"
     },
     {
-      "uri": "textures/Material.003_baseColor.png"
+      "uri": "textures/003_baseColor.png"
     },
     {
-      "uri": "textures/Material.008_baseColor.png"
+      "uri": "textures/008_baseColor.png"
     },
     {
-      "uri": "textures/Material.008_normal.png"
+      "uri": "textures/008_normal.png"
     }
   ],
   "materials": [
