@@ -4,15 +4,149 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Augmented Reality</title>
+  <link rel="stylesheet" href="https://unpkg.com/wingcss"/>
+  <title>IML Augmented Reality</title>
   <style>
-    body{
-      margin: 0;
-      background: #aaa;
+    body {
+      background: #f5f5f5;
+      color: #202020;
     }
+    button{ cursor: pointer; }
+    canvas {
+      width: 98%;
+      height: 30rem;
+    }
+    .container {
+      max-width: 800px;
+    }
+    .nav {
+      margin-top: 5rem;
+    }
+    .nav-item a {
+      color: #797979;
+      text-decoration: none;
+      font-family: "Consolas", "Monaco", "Menlo", monospace;
+    }
+    .nav-item a:hover {
+      cursor: pointer;
+      color: #4d4a4a;
+      border: none;
+    }
+    .hero {
+      color: #363636;
+      height: 65vh;
+    }
+    .hero div {
+      margin-bottom: 5rem;
+    }
+    .hero h3 {
+      font-family: "Edelsans", sans-serif;
+      font-size: 5rem;
+      margin-bottom: 0;
+    }
+    .hero h5 {
+      margin-top: 1rem;
+      margin-bottom: 0;
+      font-weight: 200;
+    }
+    .grid-demo-col {
+      background: #e4e4e4;
+    }
+    .header {
+      font-weight: 200;
+    }
+    .content {
+      font-size: 1.8rem;
+    }
+    .card {
+      background: #FAFAFA;
+    }
+    .tray{
+      margin: 2rem 0;
+      min-height: 25rem;
+      padding: 2rem;
+      background: #fff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    }
+    .tray h4{ margin: 1rem 0 }
   </style>
 </head>
 <body>
-  <script src="src/script.js"></script>
+  <nav class="nav horizontal-align">
+    <div class="nav-item"><a href="#about-project">About Project</a></div>
+    <div class="nav-item"><a href="#home">Instagram</a></div>
+    <div class="nav-item"><a href="#home">Facebook</a></div>
+  </nav>
+  <section class="hero container center text-center">
+    <div>
+      <a href="./">
+        <img src="https://res.cloudinary.com/strich/image/upload/v1539271426/warriors-and-wizards_a9ookd.png" alt="W&W Logo" height="205">
+      </a>
+      <h3>Immersive Media Lab</h3>
+      <h5>Augmented Reality Experience</h5>
+    </div>
+  </section>
+  <section id="about-project" class="container center">
+    <div>
+      <h3 class="header">About This Project</h3>
+      <div class="row">
+        <div class="col">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate ducimus placeat eum, possimus ut provident cum ea, corporis quam itaque asperiores sint facilis dolores quis velit blanditiis perspiciatis illo animi quisquam ex fuga voluptatum doloribus! Omnis culpa enim debitis suscipit ipsum obcaecati alias id! Quasi quisquam cupiditate, nisi accusantium possimus sapiente ea dignissimos impedit reiciendis, quae quis beatae laborum facilis totam reprehenderit! Beatae deserunt eligendi aliquid doloribus sed itaque consequuntur labore distinctio delectus cumque sequi, aperiam odit non nostrum commodi blanditiis nisi saepe reiciendis officia! Tempore ipsa culpa voluptatum animi, ab officia, natus accusamus quidem sequi enim quia aliquam repellendus nostrum nobis illo. Reprehenderit officiis tenetur fugit nobis perferendis dolore? Delectus, eveniet error. Dolore quisquam provident eum, praesentium, consequatur voluptas excepturi tempora mollitia eius eveniet autem ipsa atque dolorum ratione deleniti unde non inventore vero. Vero delectus, eius nam aliquid ut consectetur nobis dignissimos, ullam iusto debitis quaerat rerum facilis maiores!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="scenes" class="container">
+    <div>
+      <h3 class="header">Scenes</h3>
+      <div class="row">
+        <div class="col">
+          <div class="tray">
+            <div class="row">
+              <div class="col-3">
+                <h4>Scene B</h4>
+                <canvas id="sceneB"></canvas>
+              </div>
+              <div class="col text-center vertical-align horizontal-align">
+                <a href="#">
+                  <button>View in AR</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="tray">
+            <div class="row">
+              <div class="col-3">
+                <h4>Scene D</h4>
+                <canvas id="sceneD"></canvas>
+              </div>
+              <div class="col text-center vertical-align horizontal-align">
+                <a href="#">
+                  <button>View in AR</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="tray">
+            <div class="row">
+              <div class="col-3">
+                <h4>Scene E</h4>
+                <canvas id="sceneE"></canvas>
+              </div>
+              <div class="col text-center vertical-align horizontal-align">
+                <a href="#">
+                  <button>View in AR</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="container center text-center">
+    <p>&copy; 2018. Created by the Immersive Media Lab UWM for <a href="https://warriorsandwizardsfestival.com">Warriors &amp; Wizards Festival</a></p>
+  </footer>
+  <script src="src/main.js"></script>
 </body>
 </html>

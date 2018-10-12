@@ -5,7 +5,7 @@
   "scripts": {
     "postinstall": "npm i -g parcel-bundler",
     "start": "parcel serve -d .serve index.html",
-    "build": "parcel build -d docs --public-url ./ src/script.js"
+    "build": "parcel build -d docs --public-url ./ src/main.js"
   },
   "keywords": [
     "vr",
