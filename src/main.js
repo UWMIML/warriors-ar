@@ -1,14 +1,18 @@
 import * as THREE from 'three';
 import GLTFLoader from 'three-gltf-loader';
 import OrbitControls from 'three-orbit-controls';
+import sceneA from './sceneA.gltf';
 import sceneB from './sceneB.gltf';
+import sceneC from './sceneC.gltf';
 import sceneD from './sceneD.gltf';
 import sceneE from './sceneE.gltf';
 import sceneF from './sceneF.gltf';
 
 window.onload = function() {
   const models = [
+    { name: 'sceneA', scene: sceneA, zoom: 12, y: -2 },
     { name: 'sceneB', scene: sceneB, zoom: 20, y: -9 },
+    { name: 'sceneC', scene: sceneC, zoom: 15, y: -2 },
     { name: 'sceneD', scene: sceneD, zoom: 15, y: -3.8 },
     { name: 'sceneE', scene: sceneE, zoom: 26, y: -3.8 },
     { name: 'sceneF', scene: sceneF, zoom: 24, y: -3.8 },
