@@ -4,6 +4,7 @@ import OrbitControls from 'three-orbit-controls';
 import sceneB from './sceneB.gltf';
 import sceneD from './sceneD.gltf';
 import sceneE from './sceneE.gltf';
+import sceneF from './sceneF.gltf';
 
 window.onload = function() {
   const allCanvas = document.querySelectorAll('canvas');
@@ -11,6 +12,7 @@ window.onload = function() {
     { name: 'sceneB', scene: sceneB, zoom: 24 },
     { name: 'sceneD', scene: sceneD, zoom: 15 },
     { name: 'sceneE', scene: sceneE, zoom: 26 },
+    { name: 'sceneF', scene: sceneF, zoom: 10 },
   ];
   models.forEach(model => {
     const renderer = new THREE.WebGLRenderer({
@@ -36,7 +38,7 @@ window.onload = function() {
     loader.load(model.scene, gltf => {
       const object = gltf.scene;
       object.rotateY(40);
-      object.translateY(-3.5);
+      object.translateY(-3.8);
       scene.add(object);
     });
     animate();
