@@ -8,10 +8,10 @@ import sceneF from './sceneF.gltf';
 
 window.onload = function() {
   const models = [
-    { name: 'sceneB', scene: sceneB, zoom: 24 },
-    { name: 'sceneD', scene: sceneD, zoom: 15 },
-    { name: 'sceneE', scene: sceneE, zoom: 26 },
-    { name: 'sceneF', scene: sceneF, zoom: 18 },
+    { name: 'sceneB', scene: sceneB, zoom: 20, y: -10 },
+    { name: 'sceneD', scene: sceneD, zoom: 15, y: -3.8 },
+    { name: 'sceneE', scene: sceneE, zoom: 26, y: -3.8 },
+    { name: 'sceneF', scene: sceneF, zoom: 24, y: -3.8 },
   ];
   models.forEach(model => {
     const thisCanvas = document.querySelector(`#${model.name}`);
@@ -39,7 +39,7 @@ window.onload = function() {
     loader.load(model.scene, gltf => {
       const object = gltf.scene;
       object.rotateY(40);
-      object.translateY(-3.8);
+      object.translateY(model.y);
       root.add(object);
     });
     scene.add(root);
