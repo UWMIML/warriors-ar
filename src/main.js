@@ -7,17 +7,17 @@ import sceneE from './sceneE.gltf';
 import sceneF from './sceneF.gltf';
 
 window.onload = function() {
-  const allCanvas = document.querySelectorAll('canvas');
   const models = [
     { name: 'sceneB', scene: sceneB, zoom: 24 },
     { name: 'sceneD', scene: sceneD, zoom: 15 },
     { name: 'sceneE', scene: sceneE, zoom: 26 },
-    { name: 'sceneF', scene: sceneF, zoom: 10 },
+    { name: 'sceneF', scene: sceneF, zoom: 18 },
   ];
   models.forEach(model => {
+    const thisCanvas = document.querySelector(`#${model.name}`);
     const renderer = new THREE.WebGLRenderer({
       antialias: true,
-      canvas: document.querySelector(`#${model.name}`)
+      canvas: thisCanvas
     });
     renderer.setClearColor(0xFAFAFA);
     
@@ -30,20 +30,23 @@ window.onload = function() {
     scene.add(hemlight);
     scene.add(spotlight);
 
-    const camera = new THREE.PerspectiveCamera(45, allCanvas[0].getBoundingClientRect().width/300, 1, 1000);
+    const camera = new THREE.PerspectiveCamera(45, thisCanvas.getBoundingClientRect().width/300, 1, 1000);
     camera.position.z = model.zoom;
 
+    const root = new THREE.Group;
 
     const loader = new GLTFLoader();
     loader.load(model.scene, gltf => {
       const object = gltf.scene;
       object.rotateY(40);
       object.translateY(-3.8);
-      scene.add(object);
+      root.add(object);
     });
+    scene.add(root);
     animate();
 
     function render() {
+      root.rotation.y += 0.005;
       renderer.render(scene, camera);
     }
 
