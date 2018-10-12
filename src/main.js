@@ -8,7 +8,7 @@ import sceneF from './sceneF.gltf';
 
 window.onload = function() {
   const models = [
-    { name: 'sceneB', scene: sceneB, zoom: 20, y: -10 },
+    { name: 'sceneB', scene: sceneB, zoom: 20, y: -9 },
     { name: 'sceneD', scene: sceneD, zoom: 15, y: -3.8 },
     { name: 'sceneE', scene: sceneE, zoom: 26, y: -3.8 },
     { name: 'sceneF', scene: sceneF, zoom: 24, y: -3.8 },
