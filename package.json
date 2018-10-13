@@ -5,7 +5,7 @@
   "scripts": {
     "postinstall": "npm i -g parcel-bundler",
     "start": "parcel serve -d .serve index.html",
-    "build": "parcel build -d docs --public-url ./ src/main.js"
+    "build": "parcel build -d docs --public-url ./ src/main.js && parcel build -d docs --public-url ./ src/sceneA.js && parcel build -d docs --public-url ./ src/sceneB.js && parcel build -d docs --public-url ./ src/sceneC.js && parcel build -d docs --public-url ./ src/sceneD.js && parcel build -d docs --public-url ./ src/sceneE.js && parcel build -d docs --public-url ./ src/sceneF.js && parcel build -d docs --public-url ./ src/sceneG.js"
   },
   "keywords": [
     "vr",
