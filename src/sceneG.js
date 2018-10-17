@@ -86,6 +86,7 @@ ready(function() {
   const loader = new GLTFLoader();
   loader.load(sceneGLTF, gltf => {
     const object = gltf.scene;
+    object.position.y = 0.1;
     object.rotateX(21);
     object.rotateY(42);
     object.translateY(-10);

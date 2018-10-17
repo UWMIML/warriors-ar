@@ -39,7 +39,7 @@ ready(function() {
 
   // Add camera
   const camera = new THREE.Camera();
-  camera.position.z = 5;
+  camera.position.z = 10;
 
   // Controls
   const _orbitControls = OrbitControls(THREE);
@@ -86,7 +86,7 @@ ready(function() {
   const loader = new GLTFLoader();
   loader.load(sceneGLTF, gltf => {
     const object = gltf.scene;
-    // object.position.y = 0.5;
+    object.position.y = 0.1;
     object.rotateX(21);
     object.rotateY(42);
     object.translateY(-10);
