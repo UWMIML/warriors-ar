@@ -7,7 +7,7 @@ import {
 import GLTFLoader from 'three-gltf-loader';
 import OrbitControls from 'three-orbit-controls';
 import sceneGLTF from './sceneA.gltf';
-import kanjiMarkerPattern from './patterns/letterA.patt';
+import markerPattern from './patterns/letterA.patt';
 import cameraParam from './camera_para.dat';
 
 const ready = cb => {
@@ -38,10 +38,8 @@ ready(function() {
   scene.add(spotlight);
 
   // Add camera
-  // const camera = new THREE.Camera();
-  const camera = new THREE.PerspectiveCamera(45, windowWidth/ windowHeight, 1, 1000);
+  const camera = new THREE.Camera();
   camera.position.z = 10;
-  console.log(camera.position.z);
 
   // Controls
   const _orbitControls = OrbitControls(THREE);
@@ -81,7 +79,7 @@ ready(function() {
 
   const markerControls = new ArMarkerControls(arToolkitContext, markerRoot, {
     type: 'pattern',
-    patternUrl: kanjiMarkerPattern,
+    patternUrl: markerPattern,
     changeMatrixMode: 'cameraTransformMatrix'
   });
   // Prepare geometries and meshes
