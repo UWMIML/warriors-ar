@@ -39,7 +39,7 @@ ready(function() {
 
   // Add camera
   const camera = new THREE.Camera();
-  camera.position.z = 10;
+  camera.position.z = 30;
 
   // Controls
   const _orbitControls = OrbitControls(THREE);
